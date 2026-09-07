@@ -39,21 +39,21 @@ nix run .#bump -- 2.1.156   # pin a specific (possibly pre-promotion) version
 ### Run it directly
 
 ```sh
-nix run github:Isolyth/claude-code-nix          # run claude
-nix run github:Isolyth/claude-code-nix#bump     # update the pinned manifest
+nix run github:Eriskii/claude-code-nix          # run claude
+nix run github:Eriskii/claude-code-nix#bump     # update the pinned manifest
 ```
 
 ### Install into a profile
 
 ```sh
-nix profile install github:Isolyth/claude-code-nix
+nix profile install github:Eriskii/claude-code-nix
 ```
 
 ### Use the overlay in a NixOS / home-manager flake
 
 ```nix
 {
-  inputs.claude-code-nix.url = "github:Isolyth/claude-code-nix";
+  inputs.claude-code-nix.url = "github:Eriskii/claude-code-nix";
 
   # in your nixosSystem / homeConfiguration modules:
   { nixpkgs.overlays = [ inputs.claude-code-nix.overlays.default ]; }
